@@ -8,6 +8,7 @@
 
 #include "iostream"
 #include "ctime"
+#include "iomanip"
 using namespace std;
 
 void converteTempo(int totalMinutos, int &horaAtual, int &minutoAtual){
@@ -22,6 +23,6 @@ int main(){
     cin >> totalMinutos;
 
     converteTempo(totalMinutos, horaAtual, minutoAtual);
-    cout << "Hora corrente: " << horaAtual << " horas e: " << minutoAtual << " minutos" << endl;
+    cout << setw(2) << setfill('0') << horaAtual  << ":" << setw(2) << setfill('0') <<  minutoAtual << " Horas" <<endl;
     return 0;
 }
